@@ -1,0 +1,42 @@
+﻿@model Classificacao_F1.Models.Resultado
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Resultado</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Equipe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Equipe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Posicao_Grid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Posicao_Grid)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pontuacão)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pontuacão)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

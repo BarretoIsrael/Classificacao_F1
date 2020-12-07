@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Classificacao_F1.Models.Resultado>
+
+@{
+    ViewData["Title"] = "Classificação";
+}
+
+<h1>Tabela de Classificação</h1>
+
+<p>
+    <a asp-action="Create">Insira o próximo participante no grid</a>
+</p>
+
+<div class="row">
+    <div class="col-md-8">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Posicao_Grid)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Equipe)
+                    </th>
+                    
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Posicao_Grid) ºColocado
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Equipe)
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-4">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Pontuacão)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h7>50</h7>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h7>30</h7>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h7> 20 </h7>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <h7> 10</h7>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h7> 05 </h7>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
